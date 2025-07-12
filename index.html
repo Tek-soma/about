@@ -8,23 +8,22 @@
         body {
             font-family: sans-serif;
             line-height: 1.6;
-            margin: 0; /* Changed to 0 to allow background to fill */
-            background-color: #f4f4f4; /* Fallback background color */
+            margin: 0; 
+            background-color: #f4f4f4; 
             color: #333;
-            overflow: hidden; /* Prevent scrollbars from the SVG if it's larger than viewport */
-            position: relative; /* Needed for stacking context with absolute positioned background */
-            min-height: 100vh; /* Ensure body takes full viewport height */
+            overflow: hidden; 
+            position: relative; 
+            min-height: 100vh; 
         }
 
-        /* --- SVG Background Styles --- */
         #bg-wrap {
-            position: fixed; /* Fix the background to the viewport */
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Send it behind other content */
-            overflow: hidden; /* Hide any overflow from SVG animation */
+            z-index: -1;
+            overflow: hidden; 
         }
 
         #bg-wrap svg {
@@ -32,19 +31,17 @@
             height: 100%;
         }
 
-        /* --- Content Container Styles (to sit above the background) --- */
         .container {
             max-width: 800px;
-            margin: 50px auto; /* Added some top/bottom margin for content */
-            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for readability */
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.9); 
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2); /* Slightly stronger shadow for contrast */
-            position: relative; /* Ensure it stays above the SVG background */
-            z-index: 1; /* Keep it above the SVG */
+            box-shadow: 0 0 15px rgba(0,0,0,0.2); 
+            position: relative; 
+            z-index: 1; 
         }
 
-        /* --- Existing Content Styles --- */
         h1, h2 {
             color: #0056b3;
         }
