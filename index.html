@@ -3,23 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Music</title>
+    <title>Teksoma - About</title>
     <style>
         body {
             font-family: sans-serif;
             line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f4f4;
+            margin: 0; /* Changed to 0 to allow background to fill */
+            background-color: #f4f4f4; /* Fallback background color */
             color: #333;
+            overflow: hidden; /* Prevent scrollbars from the SVG if it's larger than viewport */
+            position: relative; /* Needed for stacking context with absolute positioned background */
+            min-height: 100vh; /* Ensure body takes full viewport height */
         }
+
+        /* --- SVG Background Styles --- */
+        #bg-wrap {
+            position: fixed; /* Fix the background to the viewport */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Send it behind other content */
+            overflow: hidden; /* Hide any overflow from SVG animation */
+        }
+
+        #bg-wrap svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* --- Content Container Styles (to sit above the background) --- */
         .container {
             max-width: 800px;
-            margin: auto;
-            background: #fff;
+            margin: 50px auto; /* Added some top/bottom margin for content */
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for readability */
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2); /* Slightly stronger shadow for contrast */
+            position: relative; /* Ensure it stays above the SVG background */
+            z-index: 1; /* Keep it above the SVG */
         }
+
+        /* --- Existing Content Styles --- */
         h1, h2 {
             color: #0056b3;
         }
@@ -52,6 +77,23 @@
     </style>
 </head>
 <body>
+    <div id="bg-wrap">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+            <defs>
+                <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5"><animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 0, 255, 1)"></stop><stop offset="100%" stop-color="rgba(255, 0, 255, 0)"></stop></radialGradient>
+                <radialGradient id="Gradient2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5"><animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(255, 255, 0, 0)"></stop></radialGradient>
+                <radialGradient id="Gradient3" cx="50%" cy="50%" fx="0.836536%" fy="50%" r=".5"><animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 255, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 255, 0)"></stop></radialGradient>
+                <radialGradient id="Gradient4" cx="50%" cy="50%" fx="4.56417%" fy="50%" r=".5"><animate attributeName="fx" dur="23s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 0, 0)"></stop></radialGradient>
+                <radialGradient id="Gradient5" cx="50%" cy="50%" fx="2.65405%" fy="50%" r=".5"><animate attributeName="fx" dur="24.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0,0,255, 1)"></stop><stop offset="100%" stop-color="rgba(0,0,255, 0)"></stop></radialGradient>
+                <radialGradient id="Gradient6" cx="50%" cy="50%" fx="0.981338%" fy="50%" r=".5"><animate attributeName="fx" dur="25.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255,0,0, 1)"></stop><stop offset="100%" stop-color="rgba(255,0,0, 0)"></stop></radialGradient>
+            </defs>
+            <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#Gradient1)" transform="rotate(334.41 50 50)"><animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="7s" repeatCount="indefinite"></animateTransform></rect>
+            <rect x="-2.17916%" y="35.4267%" width="100%" height="100%" fill="url(#Gradient2)" transform="rotate(255.072 50 50)"><animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="12s" repeatCount="indefinite"></animateTransform>
+            </rect>
+            <rect x="9.00483%" y="14.5733%" width="100%" height="100%" fill="url(#Gradient3)" transform="rotate(139.903 50 50)"><animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"></animate><animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="9s" repeatCount="indefinite"></animateTransform>
+            </rect>
+        </svg>
+    </div>
     <div class="container">
         <h1>Teksoma</h1>
         <p>Musician/Producer</p>
@@ -62,12 +104,12 @@
             <a href="https://soundcloud.com/teksoma" target="_blank">SoundCloud</a>
             <a href="https://www.youtube.com/@teksoma" target="_blank">YouTube</a>
             <a href="https://music.apple.com/us/artist/teksoma/1616459335" target="_blank">Apple Music</a>
-            </div>
+        </div>
 
         <h2>Contact</h2>
         <ul>
             <li>Email: <a href="mailto:TeksomaMusic@pm.me">TeksomaMusic@pm.me</a></li>
-            </ul>
+        </ul>
 
         <p>Teksoma 2025</p>
     </div>
