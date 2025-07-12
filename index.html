@@ -8,12 +8,12 @@
         body {
             font-family: sans-serif;
             line-height: 1.6;
-            margin: 0; 
-            background-color: #f4f4f4; 
+            margin: 0;
+            background-color: #f4f4f4;
             color: #333;
-            overflow: hidden; 
-            position: relative; 
-            min-height: 100vh; 
+            overflow: hidden;
+            position: relative;
+            min-height: 100vh;
         }
 
         #bg-wrap {
@@ -23,7 +23,7 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            overflow: hidden; 
+            overflow: hidden;
         }
 
         #bg-wrap svg {
@@ -34,12 +34,12 @@
         .container {
             max-width: 800px;
             margin: 50px auto;
-            background: rgba(255, 255, 255, 0.9); 
+            background: rgba(255, 255, 255, 0.9);
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2); 
-            position: relative; 
-            z-index: 1; 
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 1;
         }
 
         h1, h2 {
@@ -57,19 +57,45 @@
             text-decoration: none;
         }
         a:hover {
-            text-decoration: underline;
+                text-decoration: underline;
         }
-        .music-links a {
-            display: inline-block;
-            margin-right: 15px;
-            padding: 8px 15px;
-            background-color: #28a745;
-            color: white;
-            border-radius: 5px;
+
+        /* New Button CSS */
+        .enjoy-css {
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            width: 250px;
+            height: 70px;
+            cursor: pointer;
+            margin: 10px auto;
+            border: 2px solid rgb(255, 85, 0); /* Changed color */
+            -webkit-border-radius: 40px;
+            border-radius: 40px;
+            font: normal 37px/70px "Advent Pro", Helvetica, sans-serif;
+            color: rgb(255, 85, 0); /* Changed color */
+            text-align: center;
+            -o-text-overflow: clip;
+            text-overflow: clip;
+            letter-spacing: 1px;
+            background: rgba(0,0,0,0);
+            -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+            -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+            -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+            transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+            display: block;
         }
-        .music-links a:hover {
-            background-color: #218838;
-            text-decoration: none;
+        .enjoy-css:hover {
+            color: rgba(255,255,255,1);
+            background: rgb(255, 85, 0); /* Changed color */
+        }
+        .enjoy-css:active {
+            border: 2px solid rgba(255, 95, 0, 1); /* Changed color, slightly lighter for active state */
+            background: rgba(255, 95, 0, 1); /* Changed color, slightly lighter for active state */
+            -webkit-transition: none;
+            -moz-transition: none;
+            -o-transition: none;
+            transition: none;
         }
     </style>
 </head>
@@ -91,16 +117,17 @@
             </rect>
         </svg>
     </div>
+
     <div class="container">
         <h1>Teksoma</h1>
         <p>Musician/Producer</p>
 
         <h2>Listen Here!</h2>
         <div class="music-links">
-            <a href="https://open.spotify.com/artist/5zDUf0xd5Hspys5q4GVO1H?si=NXsssvjASmi6oDrR1w_IJA" target="_blank">Spotify</a>
-            <a href="https://soundcloud.com/teksoma" target="_blank">SoundCloud</a>
-            <a href="https://www.youtube.com/@teksoma" target="_blank">YouTube</a>
-            <a href="https://music.apple.com/us/artist/teksoma/1616459335" target="_blank">Apple Music</a>
+            <a class="enjoy-css" href="https://open.spotify.com/artist/5zDUf0xd5Hspys5q4GVO1H?si=NXsssvjASmi6oDrR1w_IJA" target="_blank">Spotify</a>
+            <a class="enjoy-css" href="https://soundcloud.com/teksoma" target="_blank">SoundCloud</a>
+            <a class="enjoy-css" href="https://www.youtube.com/@teksoma" target="_blank">YouTube</a>
+            <a class="enjoy-css" href="https://music.apple.com/us/artist/teksoma/1616459335" target="_blank">Apple Music</a>
         </div>
 
         <h2>Contact</h2>
