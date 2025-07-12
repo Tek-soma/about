@@ -12,7 +12,8 @@
             margin: 0;
             background-color: #f4f4f4;
             color: #333;
-            overflow: hidden;
+            overflow-y: auto;
+            overflow-x: hidden;
             position: relative;
             min-height: 100vh;
         }
@@ -75,6 +76,35 @@
             object-fit: cover;
             border-radius: 0;
             box-shadow: none;
+        }
+
+        .embed-wrapper {
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .embed-wrapper iframe {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .soundcloud-info {
+            font-size: 10px;
+            color: #cccccc;
+            line-break: anywhere;
+            word-break: normal;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+            font-weight: 100;
+            text-align: center;
+            margin-top: 5px;
+        }
+        .soundcloud-info a {
+            color: #cccccc;
+            text-decoration: none;
         }
 
         .music-links {
@@ -149,8 +179,15 @@
 
         <h2>Latest Release:</h2>
         <p>SHOP MACHINE w/HOMMR</p>
-        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/27OE5utFHUZ4xRk7HUw8WT?utm_source=generator&theme=0" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118507822&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/amflara" title="AMFLARA" target="_blank" style="color: #cccccc; text-decoration: none;">AMFLARA</a> · <a href="https://soundcloud.com/amflara/teksoma-hommr-shop-machine" title="Teksoma &amp; HOMMR - SHOP MACHINE" target="_blank" style="color: #cccccc; text-decoration: none;">Teksoma &amp; HOMMR - SHOP MACHINE</a></div>
+        <div class="embed-wrapper">
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/27OE5utFHUZ4xRk7HUw8WT?utm_source=generator&theme=0" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="embed-wrapper">
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118507822&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <div class="soundcloud-info">
+                <a href="https://soundcloud.com/amflara" title="AMFLARA" target="_blank">AMFLARA</a> · <a href="https://soundcloud.com/amflara/teksoma-hommr-shop-machine" title="Teksoma & HOMMR - SHOP MACHINE" target="_blank">Teksoma & HOMMR - SHOP MACHINE</a>
+            </div>
+        </div>
         
         <h2>Where to Listen:</h2>
         <div class="music-links">
@@ -166,6 +203,7 @@
             <li>Email: <a href="mailto:TeksomaMusic@pm.me">TeksomaMusic@pm.me</a></li>
         </ul>
 
+        <p>Teksoma 2025</p>
     </div>
 </body>
 </html>
