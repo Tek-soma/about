@@ -1,2 +1,1 @@
-# Landing page
-Landing page for music
+This is just for my website :>
